@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>HRM Smart</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Mainbody.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel = " icon " href= "icon.ico" ,  type = " image/x-icon">   
+   </head>
+<body>
+    <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">
+        <img src="logo.png" width="40px" height="30px"></div>
+        <div class="logo_name">HRM Smart</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <div class="sidenavmenu">Main Menu</div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="  Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="2 - Dashboard.html">
+          <i class='bx bxs-dashboard'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="5 - Payroll.html">
+         <i class='bx bxs-parking' ></i>
+         <span class="links_name">Payroll</span>
+       </a>
+       <span class="tooltip">Payroll</span>
+     </li>
+     <li>
+       <a href="3 - Employee.html">
+         <i class='bx bxs-user-circle' ></i>
+         <span class="links_name">Employee Data</span>
+       </a>
+       <span class="tooltip">Employee Data</span>
+     </li>
+     <li>
+       <a href="9 - Checklist.html">
+         <i class='bx bx-list-check' ></i>
+         <span class="links_name">Checklist</span>
+       </a>
+       <span class="tooltip">Checklist</span>
+     </li>
+     <li>
+       <a href="7 - Attendance.html">
+         <i class='bx bxs-calendar' ></i>
+         <span class="links_name">Attendance</span>
+       </a>
+       <span class="tooltip">Attendance</span>
+     </li>
+     <li>
+       <a href="8 - Reports.html">
+         <i class='bx bxs-report' ></i>
+         <span class="links_name">Reports</span>
+       </a>
+       <span class="tooltip">Reports</span>
+     </li>
+     <li>
+       <a href="6 - Departments.html">
+         <i class='bx bx-building' ></i>
+         <span class="links_name">Department</span>
+       </a>
+       <span class="tooltip">Department</span>
+     </li>
+     <div class="sidenavmenu2">Support</div>
+     <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="links_name">Help</span>
+        </a>
+        <span class="tooltip">Help</span>
+      </li>
+     <li>
+        <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log In</span>
+        </a>
+        <span class="tooltip">Log In</span>
+
+     </li>  
+    </ul>
+  </div>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 40%;
+    }
+    
+    td, th {	
+      border: 3px solid #000000;
+      text-align: center;
+      padding: 15px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: white;
+    }
+    </style> 
+      <section class="home-section">
+          <div class="text">Employees</div>
+        <table>
+      <tr>
+        <th>Full name</th>
+        <th>Role</th>
+        <th>Stage</th>
+      </tr>
+      
+      <tr>
+        <td>Adi Setya Negara</td>
+        <td>Manager Developer</td>
+        <th>User Interview</th>
+      </tr>
+      
+      <tr>
+        <td>Lily Marinda</td>
+        <td>Marketing</td>
+        <th>HR Interview </th>
+      </tr>
+      
+      <tr>
+        <td>Duta Skaranai</td>
+        <td>Developer</td>
+        <th>Resume Review</th>
+      </tr>
+      
+      <tr>
+        <td>Eross Djurami</td>
+        <td>Devops</td>
+        <th>Canceled</th>
+      </tr>
+      
+      <tr>
+        <td>Anton Shuahda</td>
+        <td>Mobile Dev</td>
+        <th>User Interview</th>
+      </tr>
+      
+      <tr>
+        <td>Thomas Anderson</td>
+        <td>Programmer</td>
+        <th>User Interview</th>
+      </tr>
+      
+        <tr>
+        <td>Gabriel Reyes</td>
+        <td>Marketing</td>
+        <th>HR Interview </th>
+      </tr>
+      
+        <tr>
+        <td>Jesse McCree</td>
+        <td>Manager</td>
+        <th>Resume Review</th>
+      </tr>
+    </table>
+      </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+
+
+}
+
+  
+  </script>
+</body>
+</html>
