@@ -98,6 +98,16 @@
      </li>  
     </ul>
   </div>
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-light-grey w3-padding-64 w3-margin-bottom w3-center">
+  <h1 class="w3-jumbo">Reports</h1>
+</div>
+
    <style>
 table {
   font-family: arial, sans-serif;
@@ -105,52 +115,110 @@ table {
   width: 70%;
 }
 
-td, th {	
-  border: 3px solid #000000;
-  text-align: center;
-  padding: 15px;
-}
+td,
+  th {
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  th {
+    background-color: #22b8cf;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 
 tr:nth-child(even) {
   background-color: white;
 }
 </style> 
   <section class="home-section">
-      <div class="text">Reports</div>
 	  <table>
   <tr>
-    <th>Attendance Reports</th>
-    <th>Time</th>
-  
+    <th>Employee Info</th>
+    <th>Time In</th>
+      <th>Time Out</th>
+      <th>Remarks</th>
+
   </tr>
   
+<tr>
+    <td>Thomas Anderson</td>
+    <td>06:12 AM</td>
+    <td>X</td>
+    <td>On Time</td>
+    
+  </tr>
+
+<tr>
+    <td>Eross Djurami</td>
+    <td>6:58 AM</td>
+    <td>X</td>
+    <td>On Time</td>
+    
+  </tr>
+
+<tr>
+    <td>Anton Shuahda</td>
+    <td>X</td>
+    <td>X</td>
+    <td>Absent</td>
+    
+  </tr>
+
   <tr>
-    <td>Adi Setya Negara has checked in </td>
-    <td>09:40 AM</td>
+    <td>Adi Setya Negara</td>
+    <td>06:40 AM</td>
+    <td>X</td>
+    <td>On Time</td>
     
   </tr>
   
   <tr>
-    <td>Lily Marinda has checked in </td>
-    <td>09:20 AM</td>
+    <td>Lily Marinda</td>
+    <td>07:20 AM</td>
+    <td>X</td>
+    <td>Tardy</td>
     
   </tr>
   
   <tr>
-    <td>Gabriel Reyes has checked in </td>
+    <td>Gabriel Reyes</td>
     <td>08:50 AM</td>
+    <td>X</td>
+    <td>Tardy</td>
     
   </tr>
   
   <tr>
-    <td>Duta Skaranai has checked out </td>
-    <td>Yesterday, 04:35 PM</td>
-    
+    <td>Duta Skaranai</td>
+    <td>X</td>
+    <td>X</td>
+    <td>Absent</td>
+
   </tr>
   
   <tr>
-	<td>Jesse McCree has checked out </td>
-    <td>Yesterday, 05:15 PM</td>
+	<td>Jesse McCree</td>
+    <td>X</td>
+    <td>X</td>
+    <td>Absent</td>
 
   </tr>
   

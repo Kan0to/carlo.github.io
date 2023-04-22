@@ -273,8 +273,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 1800px;
-  height: 800px;
+  width: 1500px;
+  height: 500px;
   display: flex;
   box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
 }
@@ -374,4 +374,11 @@
     display: none;
   }
 }
+
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
 

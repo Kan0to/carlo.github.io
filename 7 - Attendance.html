@@ -99,24 +99,75 @@
     </ul>
   </div>
    <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 40%;
-}
+  table {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
 
-td, th {	
-  border: 3px solid #000000;
-  text-align: center;
-  padding: 15px;
-}
+  td,
+  th {
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
 
-tr:nth-child(even) {
-  background-color: white;
-}
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  th {
+    background-color: #22b8cf;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search-container input[type=text] {
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    font-size: 14px;
+  }
+
+  .search-container button {
+    padding: 6px 10px;
+    background-color: #22b8cf;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
 </style> 
   <section class="home-section">
-      <div class="text">Attendance</div>
+  <div class="search-container">
+    <div class="text">Attendance</div>
+    
+  </div>
 	  <table>
   <tr>
     <th>Full name</th>

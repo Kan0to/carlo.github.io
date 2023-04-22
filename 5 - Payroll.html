@@ -105,23 +105,57 @@
       width: 40%;
     }
     
-    td, th {	
-      border: 3px solid #000000;
-      text-align: center;
-      padding: 15px;
-    }
+    td,
+  th {
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  th {
+    background-color: #22b8cf;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
     
     tr:nth-child(even) {
       background-color: white;
     }
+	#table1 {
+        position: absolute;
+        top: 80px;
+        left: 25px;
+    }
+    
+    #table2 {
+        position: absolute;
+        top: 80px;
+        left: 650px;
+    }
     </style> 
       <section class="home-section">
           <div class="text">Payroll</div>
-        <table>
+        <table id="table1">
       <tr>
         <th>Full name</th>
         <th>Role</th>
-        <th>Sallary</th>
+        <th>Salary</th>
       </tr>
       
       <tr>
@@ -172,6 +206,32 @@
         <th>₱55,700</th>
       </tr>
     </table>
+	
+	<table id="table2">
+  <tr>
+    <th>Payment Deadlines</th>
+    <th>Amount to be Paid</th>
+    <th>Status</th>
+  </tr>
+  
+  <tr>
+    <td>February 2023</td>
+    <td>₱433,700</td>
+    <td>PAID</td>
+  </tr>
+  
+  <tr>
+    <td>March 2023</td>
+    <td>₱622,200</td>
+    <td>PAID</td>
+  </tr>
+  
+  <tr>
+    <td>April 2023</td>
+    <td>₱555,650</td>
+    <td>PENDING</td>
+  </tr>
+</table>
   <script>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");

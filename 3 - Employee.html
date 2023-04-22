@@ -99,76 +99,129 @@
     </ul>
   </div>
   <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 40%;
-    }
+  table {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  td,
+  th {
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  th {
+    background-color: #22b8cf;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search-container input[type=text] {
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    font-size: 14px;
+  }
+
+  .search-container button {
+    padding: 6px 10px;
+    background-color: #22b8cf;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+</style>
+
+<section class="home-section">
+  <div class="search-container">
+    <div class="text">Employees</div>
     
-    td, th {	
-      border: 3px solid #000000;
-      text-align: center;
-      padding: 15px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: white;
-    }
-    </style> 
-      <section class="home-section">
-          <div class="text">Employees</div>
-        <table>
-      <tr>
-        <th>Full name</th>
-        <th>Role</th>
-        <th>Stage</th>
-      </tr>
-      
-      <tr>
-        <td>Adi Setya Negara</td>
-        <td>Manager Developer</td>
-        <th>User Interview</th>
-      </tr>
-      
-      <tr>
-        <td>Lily Marinda</td>
-        <td>Marketing</td>
-        <th>HR Interview </th>
-      </tr>
-      
-      <tr>
-        <td>Duta Skaranai</td>
-        <td>Developer</td>
-        <th>Resume Review</th>
-      </tr>
-      
-      <tr>
-        <td>Eross Djurami</td>
-        <td>Devops</td>
-        <th>Canceled</th>
-      </tr>
-      
-      <tr>
-        <td>Anton Shuahda</td>
-        <td>Mobile Dev</td>
-        <th>User Interview</th>
-      </tr>
-      
-      <tr>
-        <td>Thomas Anderson</td>
-        <td>Programmer</td>
-        <th>User Interview</th>
-      </tr>
-      
-        <tr>
-        <td>Gabriel Reyes</td>
-        <td>Marketing</td>
-        <th>HR Interview </th>
-      </tr>
-      
-        <tr>
-        <td>Jesse McCree</td>
-        <td>Manager</td>
+  </div>
+
+  <table>
+    <tr>
+      <th>Full name</th>
+      <th>Role</th>
+      <th>Stage</th>
+    </tr>
+
+    <tr>
+      <td>Adi Setya Negara</td>
+      <td>Manager Developer</td>
+      <th>User Interview</th>
+    </tr>
+
+    <tr>
+      <td>Lily Marinda</td>
+      <td>Marketing</td>
+      <th>HR Interview </th>
+    </tr>
+
+    <tr>
+      <td>Duta Skaranai</td>
+      <td>Developer</td>
+      <th>Resume Review</th>
+    </tr>
+
+    <tr>
+      <td>Eross Djurami</td>
+      <td>Devops</td>
+      <th>Canceled</th>
+    </tr>
+
+    <tr>
+      <td>Anton Shuahda</td>
+      <td>Mobile Dev</td>
+      <th>User Interview</th>
+    </tr>
+
+    <tr>
+      <td>Thomas Anderson</td>
+      <td>Programmer</td>
+      <th>User Interview</th>
+    </tr>
+
+    <tr>
+      <td>Gabriel Reyes</td>
+      <td>Marketing</td>
+      <th>HR Interview </th>
+    </tr>
+
+    <tr>
+      <td>Jesse McCree</td>
+      <td>Manager</td>
         <th>Resume Review</th>
       </tr>
     </table>
