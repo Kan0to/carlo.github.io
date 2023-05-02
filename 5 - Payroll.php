@@ -98,16 +98,14 @@
      </li>  
     </ul>
   </div>
-</div>
-
-   <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
-}
-
-td,
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 40%;
+    }
+    
+    td,
   th {
     border: 1px solid #d6d6d6;
     text-align: center;
@@ -135,103 +133,102 @@ td,
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+    
+    tr:nth-child(even) {
+      background-color: white;
+    }
+	#table1 {
+        position: absolute;
+        top: 80px;
+        left: 25px;
+    }
+    
+    #table2 {
+      position: absolute;
+        top: 80px;
+        left: 800px;
+    }
+    </style> 
+      <section class="home-section">
+          <div class="text">Payroll</div>
+          
+    <table id=table1>
+    <tr>
+      <th>Full name</th>
+      <th>Role</th>
+      <th>Salary</th>
+    </tr>
 
-tr:nth-child(even) {
-  background-color: white;
-}
+    <?php
+    $host = "localhost";
+    $dbname = "register_db";
+    $username = "root";
+    $password = "";
+    
+    $conn = mysqli_connect( hostname: $host,
+                            username: $username,
+                            password: $password,
+                            database: $dbname);
+    
+    if (mysqli_connect_errno()){
+    
+        die("connection error" . mysqli_connect_error());
+    }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-</style> 
-  <section class="home-section">
-    <div class="text">Departments</div>
-	  <table class="center">
-  <tr>
-    <th>Last Name </th>
-    <th>First Name</th>
-    <th>Position</th>
-    <th>Strengths</th>
-    <th>Rating</th>
-  
-  </tr>
-  
-  <tr>
-    <td>Negara</td>
-    <td>Adi</td>
-    <td>Manager Developer</td>
-    <td>Adaptability</td>
-    <td>XXXX-</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Marinda</td>
-    <td>Lily</td>
-    <td>Marketing</td>
-    <td>Creative Thinking</td>
-    <td>XXXX-</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Skaranai</td>
-    <td>Duta</td>
-    <td>Developer</td>
-    <td>Flexible</td>
-    <td>XXX--</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Djurami</td>
-    <td>Eross</td>
-    <td>Devops</td>
-    <td>Fast Learner</td>
-    <td>XXX--</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Shuahda</td>
-    <td>Anton</td>
-    <td>Mobile Developer</td>
-    <td>iOS and Android</td>
-    <td>XXX--</td>
-    
-  </tr>
+    $sql = "SELECT name, role, salary from salary";
+    $result = $conn->query($sql);
 
-  <tr>
-    <td>Anderson</td>
-    <td>Thomas</td>
-    <td>Programmer</td>
-    <td>Ambitious and Energetic</td>
-    <td>XXXX-</td>
-    
-  </tr>
+    if($result->num_rows>0) {
+      while ($row = $result-> fetch_assoc()) {
+        echo"<tr><td>". $row["name"] ."</td><td>". $row["role"] ."</td><td>". $row["salary"] ."</td></tr>";
+      }
+      echo "</table>";
+    }
 
-  <tr>
-    <td>Reyes</td>
-    <td>Gabriel</td>
-    <td>Marketing</td>
-    <td>Open-Minded</td>
-    <td>XXXX-</td>
-    
-  </tr>
+    $conn->close();
+    ?>
 
-  <tr>
-    <td>McCree</td>
-    <td>Jesse</td>
-    <td>Manager</td>
-    <td>Problem Solver</td>
-    <td>XXXXX</td>
-    
-  </tr>
-  
+  </table>
 
-</table>
-  </section>
+  <table id=table2>
+    <tr>
+      <th>Payment Deadlines</th>
+      <th>Amount to be Paid</th>
+      <th>Status</th>
+    </tr>
+
+    <?php
+    $host = "localhost";
+    $dbname = "register_db";
+    $username = "root";
+    $password = "";
+    
+    $conn = mysqli_connect( hostname: $host,
+                            username: $username,
+                            password: $password,
+                            database: $dbname);
+    
+    if (mysqli_connect_errno()){
+    
+        die("connection error" . mysqli_connect_error());
+    }
+
+    $sql = "SELECT deadline, amount, status from status";
+    $result = $conn->query($sql);
+
+    if($result->num_rows>0) {
+      while ($row = $result-> fetch_assoc()) {
+        echo"<tr><td>". $row["deadline"] ."</td><td>". $row["amount"] ."</td><td>". $row["status"] ."</td></tr>";
+      }
+      echo "</table>";
+    }
+
+    $conn->close();
+    ?>
+
+  </table>
+	
+
   <script>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
@@ -254,11 +251,7 @@ tr:nth-child(even) {
    }else {
      closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
    }
-
-
 }
-
-  
   </script>
 </body>
 </html>

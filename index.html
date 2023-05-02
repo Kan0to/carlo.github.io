@@ -1,192 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <title>HRM Smart</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Mainbody.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel = " icon " href= "icon.ico" ,  type = " image/x-icon">   
-	 <style>
-       body {
-         font-family: calibri;
-		 
-       }
-     </style>
-   </head>
-<body>
-    <div class="sidebar">
-    <div class="logo-details">
-        <div class="logo_name">
-        <img src="logo.png" width="40px" height="30px"></div>
-        <div class="logo_name">HRM Smart</div>
-        <i class='bx bx-menu' id="btn" ></i>
+    <title>Login</title>
+    <style>
+      body {
+        background-color: #222;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+      }
+
+      h1 {
+        color: #000000;
+        text-align: center;
+        font-size: 32px;
+        margin-top: 0;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      form {
+        margin-top: 30px;
+      }
+
+      label {
+        display: block;
+        color: #aaa;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        background-color: #f2f2f2;
+        color: #444;
+      }
+
+      input[type="submit"] {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      .links {
+        margin-top: 30px;
+        text-align: center;
+        color: #aaa;
+        font-size: 14px;
+      }
+
+      .links a {
+        color: #3498db;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .links a:hover {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form action="login.php" method="post">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Login">
+      </form>
+
+      <div class="links">
+        Don't have an account? <a href="index.html">Register</a>
+      </div>
     </div>
-    <div class="sidenavmenu">Main Menu</div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="  Search...">
-         <span class="tooltip">Search</span>
-      </li>
-      <li>
-        <a href="index.html">
-          <i class='bx bx-home-alt'></i>
-          <span class="links_name">Home</span>
-        </a>
-         <span class="tooltip">Home</span>
-      </li>
-      <li>
-        <a href="2 - Dashboard.html">
-          <i class='bx bxs-dashboard'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-       <a href="5 - Payroll.html">
-         <i class='bx bxs-parking' ></i>
-         <span class="links_name">Payroll</span>
-       </a>
-       <span class="tooltip">Payroll</span>
-     </li>
-     <li>
-       <a href="3 - Employee.html">
-         <i class='bx bxs-user-circle' ></i>
-         <span class="links_name">Employee Data</span>
-       </a>
-       <span class="tooltip">Employee Data</span>
-     </li>
-     <li>
-       <a href="9 - Checklist.html">
-         <i class='bx bx-list-check' ></i>
-         <span class="links_name">Checklist</span>
-       </a>
-       <span class="tooltip">Checklist</span>
-     </li>
-     <li>
-       <a href="7 - Attendance.html">
-         <i class='bx bxs-calendar' ></i>
-         <span class="links_name">Attendance</span>
-       </a>
-       <span class="tooltip">Attendance</span>
-     </li>
-     <li>
-       <a href="8 - Reports.html">
-         <i class='bx bxs-report' ></i>
-         <span class="links_name">Reports</span>
-       </a>
-       <span class="tooltip">Reports</span>
-     </li>
-     <li>
-       <a href="6 - Departments.html">
-         <i class='bx bx-building' ></i>
-         <span class="links_name">Department</span>
-       </a>
-       <span class="tooltip">Department</span>
-     </li>
-     <div class="sidenavmenu2">Support</div>
-     <li>
-        <a href="#">
-          <i class='bx bx-cog' ></i>
-          <span class="links_name">Help</span>
-        </a>
-        <span class="tooltip">Help</span>
-      </li>
-     <li>
-        <a href="#">
-            <i class='bx bx-log-out'></i>
-            <span class="links_name">Log In</span>
-        </a>
-        <span class="tooltip">Log In</span>
-
-     </li>  
-    </ul>
-  </div>
-  
-<title>Home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
-
-<div class="w3-light-grey w3-padding-64 w3-margin-bottom w3-center">
-  <h1 class="w3-jumbo">Homepage</h1>
-</div>
-
-
-<div class="w3-row-padding w3-content" style="max-width:1400px">
-  <div class="w3-twothird">
-    <img src="homepic.jpg" alt="Notebook" style="width:100%">
-    <h2>Welcome!</h2>
-    <div class="w3-justify">
-      <p>Welcome to our Human Resource Management website, where we aim to deliver comprehensive and creative HR solutions to assist organizations in more efficiently managing their personnel.
-
-        We understand that managing employees may be a complex and time-consuming procedure, so we created this website to simplify various HR services and assist businesses in simplifying their HR functions.
-        
-        Thank you for visiting our Human Resource Management website; we look forward to working with you to achieve your HR objectives.</p>
-
-      <h2>Need some Assistance?</h2>
-
-      <p>We're here to assist! Please get in touch with us if you have any queries regarding our HR services or would like to organize a consultation.
-
-        You can call us at +63 9xxxxxxxx or email us at hrmsmart.assistance@gmail.com
-        
-        Our dedicated team of HR specialists is available to give customized help and solutions to fit your company's specific needs. Call us today to learn how we can assist you with our website.</p>
-
-     
-    </div>
-  </div>
-  <div class="w3-third">
-    <div class="w3-container w3-light-grey">
-      <h2>Happy Easter to Everyone!</h2>
-      <p class="w3-justify">Happy Easter to all of our colleagues! May this holiday bring joy, hope, and renewed energy to your work and personal lives. Enjoy the celebrations with your loved ones and take a well-deserved break. Let's come back to the office feeling refreshed and ready to tackle new challenges.</p>
-    </div>
-    <br>
-    <div class="w3-container w3-light-grey w3-justify">
-      <h2>IMPORTANT REMINDER:</h2>
-      <p class="w3-justify">
-Starting by this month, SIM registration will soon be due. Reminding all employees to register their SIM cards as vital records are at stake.
-
-Thank you.
-</p>
-    </div>
-    <br>
-    <div class="w3-container w3-light-grey w3-justify">
-      <h2>Monthly Maintenance</h2>
-      <p class="w3-justify">Dear valued users,
-We would like to inform you that our website will be undergoing scheduled maintenance on April 12, 2022 (starts at 11:00 PM to 02:00 AM.) During this time, our website will not be accessible, and you will not be able to access our services. We apologize for any inconvenience this may cause and appreciate your patience as we work to improve our services.
-Thank you for your understanding.</p>
-    </div>
-  </div>
-</div>
-  <script>
-  let sidebar = document.querySelector(".sidebar");
-  let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
-
-  closeBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
-  });
-
-  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
-
-  // following are the code to change sidebar button(optional)
-  function menuBtnChange() {
-   if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-   }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
-   }
-
-
-}
-
-  
-  </script>
-</body>
+  </body>
 </html>

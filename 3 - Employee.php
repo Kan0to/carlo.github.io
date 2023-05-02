@@ -98,16 +98,18 @@
      </li>  
     </ul>
   </div>
-</div>
+  <style>
+  table {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
 
-   <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
-}
-
-td,
+  td,
   th {
     border: 1px solid #d6d6d6;
     text-align: center;
@@ -136,102 +138,77 @@ td,
     letter-spacing: 2px;
   }
 
-tr:nth-child(even) {
-  background-color: white;
-}
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-</style> 
-  <section class="home-section">
-    <div class="text">Departments</div>
-	  <table class="center">
-  <tr>
-    <th>Last Name </th>
-    <th>First Name</th>
-    <th>Position</th>
-    <th>Strengths</th>
-    <th>Rating</th>
-  
-  </tr>
-  
-  <tr>
-    <td>Negara</td>
-    <td>Adi</td>
-    <td>Manager Developer</td>
-    <td>Adaptability</td>
-    <td>XXXX-</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Marinda</td>
-    <td>Lily</td>
-    <td>Marketing</td>
-    <td>Creative Thinking</td>
-    <td>XXXX-</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Skaranai</td>
-    <td>Duta</td>
-    <td>Developer</td>
-    <td>Flexible</td>
-    <td>XXX--</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Djurami</td>
-    <td>Eross</td>
-    <td>Devops</td>
-    <td>Fast Learner</td>
-    <td>XXX--</td>
-    
-  </tr>
-  
-  <tr>
-    <td>Shuahda</td>
-    <td>Anton</td>
-    <td>Mobile Developer</td>
-    <td>iOS and Android</td>
-    <td>XXX--</td>
-    
-  </tr>
+  .search-container input[type=text] {
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    font-size: 14px;
+  }
 
-  <tr>
-    <td>Anderson</td>
-    <td>Thomas</td>
-    <td>Programmer</td>
-    <td>Ambitious and Energetic</td>
-    <td>XXXX-</td>
-    
-  </tr>
+  .search-container button {
+    padding: 6px 10px;
+    background-color: #22b8cf;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+</style>
 
-  <tr>
-    <td>Reyes</td>
-    <td>Gabriel</td>
-    <td>Marketing</td>
-    <td>Open-Minded</td>
-    <td>XXXX-</td>
+<section class="home-section">
+  <div class="search-container">
+    <div class="text">Employees</div>
     
-  </tr>
+  </div>
 
-  <tr>
-    <td>McCree</td>
-    <td>Jesse</td>
-    <td>Manager</td>
-    <td>Problem Solver</td>
-    <td>XXXXX</td>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Full name</th>
+      <th>Role</th>
+      <th>Stage</th>
+    </tr>
+
+    <?php
+    $host = "localhost";
+    $dbname = "register_db";
+    $username = "root";
+    $password = "";
     
-  </tr>
-  
+    $conn = mysqli_connect( hostname: $host,
+                            username: $username,
+                            password: $password,
+                            database: $dbname);
+    
+    if (mysqli_connect_errno()){
+    
+        die("connection error" . mysqli_connect_error());
+    }
 
-</table>
-  </section>
+    $sql = "SELECT id, name, role, stage from employees";
+    $result = $conn->query($sql);
+
+    if($result->num_rows>0) {
+      while ($row = $result-> fetch_assoc()) {
+        echo"<tr><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["role"] ."</td><td>". $row["stage"] ."</td></tr>";
+      }
+      echo "</table>";
+    }
+
+    $conn->close();
+    ?>
+
+    </table>
+      </section>
   <script>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
